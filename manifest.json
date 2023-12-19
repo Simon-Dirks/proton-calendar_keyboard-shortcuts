@@ -3,6 +3,11 @@
   "name": "Proton Calendar Keyboard Shortcuts",
   "version": "1.0",
   "description": "Adds keyboard shortcuts (next week, previous week, today) to Proton Calendar",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "proton-calendar_keyboard-shortcuts"
+    }
+  },
   "icons": {
     "48": "icons/48.png"
   },
