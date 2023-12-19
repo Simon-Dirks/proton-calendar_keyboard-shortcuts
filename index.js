@@ -38,13 +38,14 @@ document.addEventListener("keydown", function (event) {
         buttonQueries.push('[data-testid="calendar-view:view-options-dropdown"]');
     }
 
-    if (buttonQueries) {
-        for (const buttonQuery of buttonQueries) {
-            const button = document.querySelector(buttonQuery);
-            if (button) {
-                button.click();
-            }
-        }
+    if (!buttonQueries || buttonQueries.length === 0) {
+        return;
+    }
 
+    for (const buttonQuery of buttonQueries) {
+        const button = document.querySelector(buttonQuery);
+        if (button) {
+            button.click();
+        }
     }
 });
