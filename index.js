@@ -1,4 +1,13 @@
+const ignoreShortcutsForClassNames = ['eventpopover-header--draggable', 'modal-two'];
+const ignoreElementsQuery = ignoreShortcutsForClassNames.map(className => `.${className}`).join(',')
+
 document.addEventListener("keydown", function (event) {
+    const ignoreElements = document.querySelectorAll(ignoreElementsQuery);
+    const ignoreElementsAreShown = ignoreElements.length > 0
+    if (ignoreElementsAreShown) {
+        return;
+    }
+
     let buttonQueries = [];
     const key = event.key.toLowerCase();
 
