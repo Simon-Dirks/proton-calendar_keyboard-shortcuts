@@ -5,7 +5,7 @@
   "description": "Adds keyboard shortcuts (e.g., next, previous, today) to Proton Calendar",
   "browser_specific_settings": {
     "gecko": {
-      "id": "proton-calendar_keyboard-shortcuts"
+      "id": "proton-calendar_keyboard-shortcuts@example.com"
     }
   },
   "icons": {
