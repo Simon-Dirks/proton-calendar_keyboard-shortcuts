@@ -56,10 +56,15 @@ document.addEventListener("keydown", function (event) {
     return;
   }
 
-  for (const buttonQuery of buttonQueries) {
-    const button = document.querySelector(buttonQuery);
-    if (button) {
-      button.click();
+  const clickButtons = async () => {
+    for (const query of buttonQueries) {
+      const button = document.querySelector(query);
+      if (button) {
+        button.click();
+        await new Promise((resolve) => setTimeout(resolve, 1));
+      }
     }
-  }
+  };
+
+  clickButtons();
 });
