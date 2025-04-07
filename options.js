@@ -7,11 +7,21 @@ const defaultShortcuts = {
   month: "m",
 };
 
+// Convert input to lowercase immediately on input
+function setupInputHandlers() {
+  Object.keys(defaultShortcuts).forEach(key => {
+    const input = document.getElementById(key);
+    input.addEventListener('input', (e) => {
+      e.target.value = e.target.value.toLowerCase();
+    });
+  });
+}
+
 function saveOptions() {
   const shortcuts = {};
   for (const key of Object.keys(defaultShortcuts)) {
-    const value =
-      document.getElementById(key).value.toLowerCase() || defaultShortcuts[key];
+    // Get value and ensure it's lowercase, fallback to default if empty
+    const value = document.getElementById(key).value.toLowerCase() || defaultShortcuts[key];
     shortcuts[key] = value;
   }
 
@@ -33,5 +43,8 @@ function restoreOptions() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", restoreOptions);
+document.addEventListener("DOMContentLoaded", () => {
+  restoreOptions();
+  setupInputHandlers();
+});
 document.getElementById("save").addEventListener("click", saveOptions);
