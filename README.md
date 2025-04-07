@@ -2,6 +2,9 @@
 
 <a rel="noreferrer noopener" href="https://addons.mozilla.org/en-US/firefox/addon/proton-calendar-shortcuts/"><img alt="Firefox Add-ons" src="firefox-addon-badge.svg" width="150"></a>
 
+The default keyboard shortcuts are listed below. You can customize these in the extension's preferences:
+<img src="shortcuts-preferences.png" width="400">
+
 ### Navigation
 
 - `n`: Next
