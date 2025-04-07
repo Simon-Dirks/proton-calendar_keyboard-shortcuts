@@ -7,6 +7,7 @@
 - `n`: Next
 - `p`: Previous
 - `t`: Today
+- `/`: Search
 
 ### Views
 

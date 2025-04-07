@@ -5,6 +5,7 @@ const defaultShortcuts = {
   day: "d",
   week: "w",
   month: "m",
+  search: "/",
 };
 
 // Convert input to lowercase immediately on input

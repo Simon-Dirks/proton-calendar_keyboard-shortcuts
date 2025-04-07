@@ -1,6 +1,7 @@
 const ignoreShortcutsForClassNames = [
   "eventpopover-header--draggable",
   "modal-two",
+  "searchbox",
 ];
 const ignoreElementsQuery = ignoreShortcutsForClassNames
   .map((className) => `.${className}`)
@@ -13,6 +14,7 @@ const defaultShortcuts = {
   day: "d",
   week: "w",
   month: "m",
+  search: "/",
 };
 
 // Get shortcuts from storage or use defaults
@@ -74,6 +76,21 @@ document.addEventListener("keydown", function (event) {
     buttonQueries.push('[data-testid="calendar-view:view-options-dropdown"]');
     buttonQueries.push('[data-testid="view-option-month"]');
     buttonQueries.push('[data-testid="calendar-view:view-options-dropdown"]');
+  }
+
+  // Search
+  if (key === currentShortcuts.search) {
+    event.preventDefault();
+
+    const searchButtons = Array.from(document.querySelectorAll("button"));
+    const searchButton = searchButtons.find(
+      (button) => button.querySelector(".sr-only")?.textContent === "Search"
+    );
+
+    if (searchButton) {
+      setTimeout(() => searchButton.click(), 10);
+      return;
+    }
   }
 
   if (!buttonQueries || buttonQueries.length === 0) {
