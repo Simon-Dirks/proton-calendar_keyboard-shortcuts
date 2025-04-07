@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Proton Calendar Shortcuts Settings</title>
+  <style>
+    body {
+      padding: 20px;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .shortcut-row {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    .shortcut-label {
+      width: 120px;
+      margin-right: 10px;
+    }
+    input {
+      width: 100px;
+      padding: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 8px 16px;
+      background-color: #6d4aff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #5b3df5;
+    }
+    #status {
+      margin-top: 15px;
+      color: #2e8e4e;
+    }
+  </style>
+</head>
+<body>
+  <h2>Keyboard Shortcuts</h2>
+  <div class="shortcut-row">
+    <span class="shortcut-label">Next:</span>
+    <input type="text" id="next" maxlength="1">
+  </div>
+  <div class="shortcut-row">
+    <span class="shortcut-label">Previous:</span>
+    <input type="text" id="previous" maxlength="1">
+  </div>
+  <div class="shortcut-row">
+    <span class="shortcut-label">Today:</span>
+    <input type="text" id="today" maxlength="1">
+  </div>
+  <div class="shortcut-row">
+    <span class="shortcut-label">Day View:</span>
+    <input type="text" id="day" maxlength="1">
+  </div>
+  <div class="shortcut-row">
+    <span class="shortcut-label">Week View:</span>
+    <input type="text" id="week" maxlength="1">
+  </div>
+  <div class="shortcut-row">
+    <span class="shortcut-label">Month View:</span>
+    <input type="text" id="month" maxlength="1">
+  </div>
+  <button id="save">Save</button>
+  <div id="status"></div>
+  <script src="options.js"></script>
+</body>
+</html>
